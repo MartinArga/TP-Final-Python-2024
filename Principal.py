@@ -60,17 +60,16 @@ def guardar_datos_en_base(ticker, datos):
 def mostrar_resumen():
     conexion = sqlite3.connect("datos_mercado.db")
     cursor = conexion.cursor()
-    cursor.execute('''
-        SELECT ticker, MIN(fecha), MAX(fecha) FROM datos_mercado
-        GROUP BY ticker
-    ''')
+    cursor.execute('''SELECT ticker, MIN(fecha), MAX(fecha) FROM datos_mercado GROUP BY ticker''')
     filas = cursor.fetchall()
     conexion.close()
 
     if filas:
-        print("Los tickers guardados en la base de datos son:")
+        print("\n---  Los tickers guardados en la base de datos son ---")
         for fila in filas:
-            print(f"{fila[0]} - {fila[1]} <-> {fila[2]}")
+            fecha_inicio = fila[1][:10]
+            fecha_fin = fila[2][:10]  
+            print(f"{fila[0]} - {fecha_inicio} <-> {fecha_fin}")
     else:
         print("No hay datos almacenados en la base de datos.")
 
@@ -104,7 +103,7 @@ def graficar_datos_ticker(ticker):
 # Menú principal del programa.
 def menu_principal():
     while True:
-        print("\n--- Menú Principal ---")
+        print("\n---- Menú Principal ----")
         print("1. Actualización de datos")
         print("2. Visualización de datos")
         print("3. Salir")

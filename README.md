@@ -5,8 +5,11 @@ Proyecto final del curso de Python del ITBA. Año 2024.
 ```
 conda create -n <env>
 conda activate <env>
-conda install python==3.10.13
+conda install python==3.13.0
 conda install jupyterlab==4.2.5
 pip install -r requirements.txt
+
 ```
-# Esta aplicacion utiliza una API del sitio "http://api.marketstack.com/v1/" con una clave
+## Resumen
+Se genera un una aplicacion en código Python, que obtiene los datos a través de una API de finanzafis: "http://api.marketstack.com/v1/", los guarda en una base de datos SQLite junto con la correspondiente tabla y genera un grá
+fico a partir de los ticker almacenados
