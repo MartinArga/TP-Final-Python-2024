@@ -11,5 +11,6 @@ pip install -r requirements.txt
 
 ```
 ## Resumen
-Se genera un una aplicacion en código Python, que obtiene los datos a través de una API de finanzafis: "http://api.marketstack.com/v1/", los guarda en una base de datos SQLite junto con la correspondiente tabla y genera un grá
-fico a partir de los ticker almacenados
+Se genera una aplicacion en código Python, que obtiene los datos a través de una API de finanzas: "http://api.marketstack.com/v1/", los guarda en una base de datos SQLite junto con la correspondiente tabla y genera un gráfico a partir de los tickers almacenados.
+
+La aplicacion se dividió en seis funciones para reducir el nümero total de líneas de código, haciendo que sea mas fácil de generar, entender y corregir
