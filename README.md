@@ -9,3 +9,4 @@ conda install python==3.10.13
 conda install jupyterlab==4.2.5
 pip install -r requirements.txt
 ```
+#Esta aplicacion utiliza una API del sitio "http://api.marketstack.com/v1/" con una clave
